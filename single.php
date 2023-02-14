@@ -15,15 +15,18 @@ get_header(); ?>
                     </div>
                     <div class="post-images">
                         <?php the_post_thumbnail('post-img'); ?>
-                    </div>
+                    </div><?php
+                    wp_reset_postdata();
+                endwhile; ?>
+                    <?php endif; ?>
                         <?php
                         the_content();
                         if (comments_open() || get_comments_number()):
                             comments_template();
                         endif;
+                        
 
-                endwhile; ?>
-                    <?php endif; ?>
+               ?>
             </div>
         <div class="home-sidebar col-lg-4 col-xs-12 pl-0 pr-0">
                 <?php get_sidebar(); ?>

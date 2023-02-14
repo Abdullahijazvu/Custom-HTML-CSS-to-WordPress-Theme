@@ -16,6 +16,10 @@ function blog_theme_setup(){
 
   add_theme_support('automatic-feed-links');
 
+  add_theme_support('html5', array(
+    'comment-list','comment-form','serach-form','gallery','caption'
+  ));
+
   register_nav_menus(
     array(
       'primary' => __( 'Primary Menu', 'blog')
@@ -62,3 +66,4 @@ add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
 //Include Customizer
 //require get_template_directory() .'/customizer.php';
+
